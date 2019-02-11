@@ -89,12 +89,55 @@
 	label fig
 	
 	\begin{figure}
-	\includegraphics[width=1\textwidth]{makis}
-	\caption{jum}\label{fig:first-figure}
+		\centering
+		\includegraphics[width=0.5\textwidth]{makis}
+		\caption{Makis are always the answer}\label{fig:first-figure}
 	\end{figure}
 	jum
 	es una buena practica ponerlo o suber arriba o super abajo
 	
+	\newpage
 	\subsection{Inserting Tables}
+	
+	Tienes un montón de flexibilidad con las tablas, pero todas requieren dos ambientes o enviroments específicos: tabular y table. Si bien el ambiente tabular es suficiente para usar los comandos de tablas, table es lo que da el espaciado que pone la tabla al inicio de la página (como las imágenes), permite el centrado y el añadirle una leyenda (y etiquetas)
+	\\ \\
+	Dudas:
+	
+	¿Cómo logro un salto de línea en una tabla?
+	
+	¿Cómo logro que algo se centro cuando uso p\{Xin\}?
+	\\ \\
+	ctrl enter
+	\\ \\
+	view -> show -> side panel
+	
+	\begin{table}
+		\centering
+		\begin{tabular}{l|c|p{2in}|c}
+			\hline
+			Comando & Argumentos & Comentario & Color \\ \hline
+			begin   & tabular & Crea un ambiente para los comandos de las tablas & blue \\
+			        & table   & Crea un ambiente para el espaciado de las tablas  & blue \\ \hline
+			tabular & \{xxxx\}  & x: l, c, r (alineado), | (división), p\{Xin\} (columna tamaño fijo, autoajustado) & requiere begin\\ \hline       
+			centering & |     & Centra los elementos a nivel de grupo  & red \\ \hline
+			hline   & |       & Crea una línea horizontal, solo en \{tabular\} o \{array\} & red \\ \hline
+			backslash(2) & |  & Crea una nueva línea, tambien sirve en \{tabular\} & red \\
+			\hline
+		\end{tabular}	
+		\caption{Comandos Adicionales}
+	\end{table}
+	
+	
+	\begin{table}
+	\centering
+		\begin{tabular}{|l|c|c|p{1in}|}
+			\hline
+			Head 1 & Head 2 & Head 3 & Head 4 \\ \hline
+			1 & 2 & 3 & 4 \\
+			\hline
+		\end{tabular}	
+	\caption{Table Example}\label{tab:first-table}
+	\end{table}
+	
 	
 \end{document}
